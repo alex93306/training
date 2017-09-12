@@ -1,0 +1,12 @@
+{
+    "events": [
+        {
+            "location": "San Francisco",
+            "date": "May 1"
+        },
+        {
+            "location": "Austin, TX",
+            "date": "May 15"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Class-Path: logback-classic-1.1.2.jar slf4j-api-1.7.6.jar spring-secur
+ ity-core-4.0.1.RELEASE.jar mail-1.4.3.jar jstl-1.2.jar spring-webmvc-
+ 4.1.6.RELEASE.jar imgscalr-lib-4.2.jar spring-core-4.1.6.RELEASE.jar 
+ logback-core-1.1.2.jar jcl-over-slf4j-1.7.6.jar spring-context-4.1.6.
+ RELEASE.jar JUnitParams-1.0.4.jar spring-jdbc-4.1.6.RELEASE.jar sprin
+ g-tx-4.1.6.RELEASE.jar spring-aspects-4.1.6.RELEASE.jar jackson-annot
+ ations-2.2.3.jar spring-web-4.1.6.RELEASE.jar spring-security-taglibs
+ -4.0.1.RELEASE.jar h2-1.3.173.jar commons-pool-1.5.4.jar spring-orm-4
+ .1.6.RELEASE.jar spring-beans-4.1.6.RELEASE.jar hibernate-validator-4
+ .2.0.Final.jar aspectjweaver-1.8.5.jar spring-aop-4.1.6.RELEASE.jar c
+ ommons-io-2.4.jar validation-api-1.0.0.GA.jar spring-security-acl-4.0
+ .1.RELEASE.jar jackson-core-2.2.3.jar commons-dbcp-1.4.jar commons-fi
+ leupload-1.3.1.jar spring-security-config-4.0.1.RELEASE.jar jackson-d
+ atabind-2.2.3.jar spring-expression-4.1.6.RELEASE.jar activation-1.1.
+ jar aopalliance-1.0.jar spring-security-web-4.0.1.RELEASE.jar
+Main-Class: 
+

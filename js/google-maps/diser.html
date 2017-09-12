@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script></head>
+<script>
+    $(function() {
+        var mapCenter = new google.maps.LatLng(47.6145, -122.3418);
+        var map;
+        initialize();
+        function initialize() {
+            var googleMapOptions = {
+                center: mapCenter,
+                zoom: 17,
+                panControl: true, //enable pan Control
+                zoomControl: true, //enable zoom control
+                zoomControlOptions: {
+                    style: google.maps.ZoomControlStyle.SMALL
+                },
+                scaleControl: true, // enable scale control
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map=new google.maps.Map(document.getElementById('google_map'), googleMapOptions);
+
+            google.maps.event.addListener(map, 'rightclick', function(event) {
+                var marker=new google.maps.Marker({
+                    position: event.latLng,
+                    map: map,
+                    draggable: false,
+                    animation: google.maps.Animation.DROP,
+                    title: "Hellow World!"
+                });
+            });
+        }
+    });
+</script>
+<style>
+    #google_map {width: 90%; height: 500px;margin-top:0px;margin-left:auto;margin-right:auto;}
+    h1.heading{text-align:center;font: 18px Georgia, "Times New Roman", Times, serif;}
+</style>
+<body>
+
+<h1 class="heading">My Google</h1>
+<div align="center">Right Click to Drop a New Marker</div>
+<div id="google_map"></div>
+</body>
+</html>

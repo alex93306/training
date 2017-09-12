@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Тег SCRIPT</title>
+    <script>
+
+    </script>
+    <style>
+        body {
+            background-color: #cccccc;
+        }
+        .window {
+            width: 500px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -250px;
+            margin-top: -150px;
+            background-color: #ececec;
+        }
+        label, input {
+            display: inline-block;
+            width: 220px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="window">
+    <h1 class="header">Welcome</h1>
+    <form id="login-form" action="/sf">
+        <label for="login">Login</label>
+        <input id="login" type="text"/>
+        <label for="pass">Password</label>
+        <input type="password" id="pass"/>
+        <label for="lang">Language</label>
+        <select id="lang">
+            <option value="none">None</option>
+            <option value="ru">Russian</option>
+            <option value="en">English</option>
+            <option value="be">Belarussian</option>
+        </select>
+        <label for="remember">Remember me?</label>
+        <input id="remember" type="checkbox" checked="checked"/>
+        <input type="submit" id="submit-btn" value="Login"/>
+    </form>
+</div>
+<script src="../js/jquery-1.11.3.js"></script>
+<script>
+    $('#submit-btn').click(function(e) {
+        var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+        $.getJSON( flickerAPI, {
+                    tags: "mount rainier",
+                    tagmode: "any",
+                    format: "json"
+                })
+                .done(function( data ) {
+                    if(confirm("is sure?")) {
+                        $('#login-form').submit();
+                    }
+                     else {
+                        return false;
+                    }
+                });
+        return false;
+
+
+    });
+
+
+</script>
+</body>
+</html>
+
+
